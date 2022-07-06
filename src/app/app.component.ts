@@ -20,4 +20,8 @@ export class AppComponent implements OnInit {
       map((p) => p.filter((item) => item.id !== id))
     );
   }
+  addPerson(person: Person) {
+    console.log(person);
+    this.people = this.people?.pipe(map((p) => p.concat(person)));
+  }
 }
